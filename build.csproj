@@ -51,7 +51,6 @@
   <ItemGroup>
     <None Include="build.bat" />
     <None Include="build\build_utilities.rb" />
-    <None Include="build\connection_details.rb" />
     <None Include="build\connection_details.rb.customize" />
     <None Include="build\local_properties.rb" />
     <None Include="build\local_properties.rb.customize" />
@@ -60,6 +59,7 @@
     <None Include="product\config\app.config.erb" />
     <None Include="product\config\hibernate.cfg.xml.erb" />
     <None Include="product\config\log4net.config.xml.erb" />
+    <None Include="product\docs\project_conventions.markdown" />
     <None Include="product\sql\ddl\001\001_db.sql.erb" />
     <None Include="product\sql\ddl\001\002_security.sql.erb" />
     <None Include="product\sql\ddl\001\003_asp_login.sql.erb" />
