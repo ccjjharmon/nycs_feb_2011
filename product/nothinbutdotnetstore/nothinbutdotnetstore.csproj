@@ -86,11 +86,14 @@
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\aspnet\BasicHandler.cs" />
     <Compile Include="web\CommandRegistry.cs" />
+    <Compile Include="web\DefaultCommandRegistry.cs" />
     <Compile Include="web\DefaultFrontController.cs" />
+    <Compile Include="web\DefaultRequest.cs" />
     <Compile Include="web\FrontController.cs" />
     <Compile Include="web\Request.cs" />
     <Compile Include="web\RequestCommand.cs" />
     <Compile Include="web\RequestFactory.cs" />
+    <Compile Include="web\RequestType.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
