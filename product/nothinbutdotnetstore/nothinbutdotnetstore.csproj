@@ -84,10 +84,15 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="DefaultCalculator.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="web\aspnet\BasicHandler.cs" />
+    <Compile Include="web\CommandRegistry.cs" />
+    <Compile Include="web\DefaultFrontController.cs" />
+    <Compile Include="web\FrontController.cs" />
+    <Compile Include="web\Request.cs" />
+    <Compile Include="web\RequestCommand.cs" />
+    <Compile Include="web\RequestFactory.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="some_namespace\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
