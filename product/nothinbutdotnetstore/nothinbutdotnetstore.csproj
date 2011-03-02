@@ -86,6 +86,7 @@
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\aspnet\BasicHandler.cs" />
     <Compile Include="web\CommandRegistry.cs" />
+    <Compile Include="web\DefaultCommandRegistry.cs" />
     <Compile Include="web\DefaultFrontController.cs" />
     <Compile Include="web\FrontController.cs" />
     <Compile Include="web\Request.cs" />

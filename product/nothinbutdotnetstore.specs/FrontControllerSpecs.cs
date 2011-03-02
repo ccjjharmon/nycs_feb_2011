@@ -18,8 +18,8 @@ namespace nothinbutdotnetstore.specs
         {
             Establish c = () =>
             {
-                request =an<Request>();
                 command_registry = the_dependency<CommandRegistry>();
+                request =an<Request>();
                 command_that_can_process_the_request = an<RequestCommand>();
 
                 command_registry.Stub(x => x.get_the_command_that_can_handle(request))

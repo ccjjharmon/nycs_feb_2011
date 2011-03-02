@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Web;
 
 namespace nothinbutdotnetstore.specs.utility
@@ -22,6 +24,11 @@ namespace nothinbutdotnetstore.specs.utility
             {
                 return new HttpResponse(new StringWriter());
             }
+        }
+
+        public static IEnumerable<T> create_a_set_of<T>(int number_to_create, Func<T> factory)
+        {
+            return Enumerable.Range(1, number_to_create).Select(x => factory());
         }
     }
 }
