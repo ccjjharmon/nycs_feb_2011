@@ -13,7 +13,7 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         class StubRequest : Request
         {
-            public InputModel get_a<InputModel>()
+            public InputModel map<InputModel>()
             {
                 object item = new Department();
                 return (InputModel) item;

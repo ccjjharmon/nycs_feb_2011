@@ -38,7 +38,7 @@ namespace nothinbutdotnetstore.specs
                 sub_departments = ObjectFactory.create_a_set_of(100, () => new Department());
                 request = an<Request>();
 
-                request.Stub(x => x.get_a<Department>()).Return(parent_department);
+                request.Stub(x => x.map<Department>()).Return(parent_department);
 
                 store_catalog.Stub(x => x.get_sub_departments_for(parent_department))
                     .Return(sub_departments);

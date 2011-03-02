@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using nothinbutdotnetstore.web.application.catalogbrowsing;
@@ -16,7 +15,7 @@ namespace nothinbutdotnetstore.web.core.stubs
         {
             yield return new DefaultRequestCommand(
                 x => true,
-                new ViewTheDepartmentsInADepartment());
+                new ViewTheProductsIntheDepartment());
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using nothinbutdotnetstore.tasks;
+﻿using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.utility;
 using nothinbutdotnetstore.web.application.model;
@@ -13,8 +12,8 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
         StoreCatalog store_catalog;
         ResponseEngine response_engine;
 
-        public ViewTheDepartmentsInADepartment():this(Stub.with<StubStoreCatalog>(),
-            Stub.with<StubResponseEngine>())
+        public ViewTheDepartmentsInADepartment() : this(Stub.with<StubStoreCatalog>(),
+                                                        Stub.with<StubResponseEngine>())
         {
         }
 
@@ -26,7 +25,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
 
         public void run(Request request)
         {
-            response_engine.display(store_catalog.get_sub_departments_for(request.get_a<Department>()));
+            response_engine.display(store_catalog.get_sub_departments_for(request.map<Department>()));
         }
     }
 }
