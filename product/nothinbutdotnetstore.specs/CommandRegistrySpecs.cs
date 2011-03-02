@@ -13,7 +13,7 @@ namespace nothinbutdotnetstore.specs
         public abstract class concern : Observes<CommandRegistry,
                                             DefaultCommandRegistry>
         {
-        
+
         }
 
         [Subject(typeof(DefaultCommandRegistry))]
@@ -28,6 +28,7 @@ namespace nothinbutdotnetstore.specs
                 all_commands.Add(the_command_that_can_process);
 
                 provide_a_basic_sut_constructor_argument<IEnumerable<RequestCommand>>(all_commands);
+                provide_a_basic_sut_constructor_argument<MissingRequestCommandFactory>(an<RequestCommand>);
 
                 the_command_that_can_process.Stub(x => x.can_handle(request))
                     .Return(true);
@@ -44,6 +45,32 @@ namespace nothinbutdotnetstore.specs
             static RequestCommand the_command_that_can_process;
             static Request request;
             static IList<RequestCommand> all_commands;
+        }
+
+        [Subject(typeof(DefaultCommandRegistry))]
+        public class when_attempting_to_get_a_command_for_a_request_and_there_is_no_command : concern
+        {
+            Establish c = () =>
+            {
+                request = an<Request>();
+                special_case = an<RequestCommand>();
+                all_commands = ObjectFactory.create_a_set_of(100, an<RequestCommand>).ToList();
+
+                provide_a_basic_sut_constructor_argument<IEnumerable<RequestCommand>>(all_commands);
+                provide_a_basic_sut_constructor_argument<MissingRequestCommandFactory>(() => special_case);
+            };
+
+            Because b = () =>
+                result = sut.get_the_command_that_can_handle(request);
+
+
+            It should_return_the_special_case = () =>
+                result.ShouldEqual(special_case);
+
+            static RequestCommand result;
+            static Request request;
+            static IList<RequestCommand> all_commands;
+            static RequestCommand special_case;
         }
     }
 }

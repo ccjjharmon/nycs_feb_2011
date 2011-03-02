@@ -1,29 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace nothinbutdotnetstore.web
 {
     public class DefaultCommandRegistry : CommandRegistry
     {
+        IEnumerable<RequestCommand> all_commands;
 
-        private IEnumerable<RequestCommand> requestCommands;
-        public RequestCommand DefaultCommand { get; set; }
-        public DefaultCommandRegistry(IEnumerable<RequestCommand> requestCommands)
+        public DefaultCommandRegistry(IEnumerable<RequestCommand> all_commands)
         {
-            this.requestCommands = requestCommands;
+            this.all_commands = all_commands;
         }
 
         public RequestCommand get_the_command_that_can_handle(Request request)
         {
-            foreach (var requestCommand in requestCommands)
-            {
-                if (requestCommand.can_handle(request))
-                {
-                    return requestCommand;
-                }
-            }
-
-            return DefaultCommand;
+            return all_commands.First(x => x.can_handle(request));
         }
     }
 }

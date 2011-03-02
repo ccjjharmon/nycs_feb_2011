@@ -85,6 +85,7 @@
     <Compile Include="DefaultCalculator.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\aspnet\BasicHandler.cs" />
+    <Compile Include="web\Class1.cs" />
     <Compile Include="web\CommandRegistry.cs" />
     <Compile Include="web\DefaultCommandRegistry.cs" />
     <Compile Include="web\DefaultFrontController.cs" />
