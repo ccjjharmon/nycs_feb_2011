@@ -87,6 +87,7 @@
     <Compile Include="tasks\StoreCatalog.cs" />
     <Compile Include="tasks\stubs\StubStoreCatalog.cs" />
     <Compile Include="utility\Stub .cs" />
+    <Compile Include="web\application\catalogbrowsing\ViewTheDepartmentsInADepartment.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\application\model\Department.cs" />
     <Compile Include="web\core\ApplicationBehaviour .cs" />
