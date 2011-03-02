@@ -6,5 +6,7 @@ namespace nothinbutdotnetstore.tasks
     public interface StoreCatalog
     {
         IEnumerable<Department> get_the_main_departments_in_the_store();
+        IEnumerable<Department> get_the_departments_for(Department dept);
+
     }
 }
