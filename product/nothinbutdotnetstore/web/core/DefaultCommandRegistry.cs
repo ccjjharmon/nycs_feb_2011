@@ -1,12 +1,19 @@
 using System.Collections.Generic;
 using System.Linq;
+using nothinbutdotnetstore.utility;
+using nothinbutdotnetstore.web.core.stubs;
 
-namespace nothinbutdotnetstore.web
+namespace nothinbutdotnetstore.web.core
 {
     public class DefaultCommandRegistry : CommandRegistry
     {
         IEnumerable<RequestCommand> all_commands;
         MissingRequestCommandFactory special_case_factory;
+
+        public DefaultCommandRegistry():this(Stub.with<StubSetOfCommands>(),
+            Stub.with<StubSpecialCaseFactory>().create)
+        {
+        }
 
         public DefaultCommandRegistry(IEnumerable<RequestCommand> all_commands, MissingRequestCommandFactory special_case_factory)
         {

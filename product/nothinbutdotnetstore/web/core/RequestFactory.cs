@@ -1,6 +1,6 @@
 using System.Web;
 
-namespace nothinbutdotnetstore.web
+namespace nothinbutdotnetstore.web.core
 {
     public interface RequestFactory
     {

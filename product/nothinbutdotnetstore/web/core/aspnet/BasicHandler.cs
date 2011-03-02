@@ -1,11 +1,18 @@
 using System.Web;
+using nothinbutdotnetstore.utility;
+using nothinbutdotnetstore.web.core.stubs;
 
-namespace nothinbutdotnetstore.web.aspnet
+namespace nothinbutdotnetstore.web.core.aspnet
 {
     public class BasicHandler : IHttpHandler
     {
         FrontController front_controller;
         RequestFactory request_factory;
+
+        public BasicHandler():this(new DefaultFrontController(),
+            Stub.with<StubRequestFactory>())
+        {
+        }
 
         public BasicHandler(FrontController front_controller, RequestFactory request_factory)
         {

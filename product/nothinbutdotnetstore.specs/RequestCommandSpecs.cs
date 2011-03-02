@@ -1,6 +1,7 @@
  using Machine.Specifications;
  using Machine.Specifications.DevelopWithPassion.Rhino;
  using nothinbutdotnetstore.web;
+ using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.specs
 {   
@@ -9,7 +10,6 @@ namespace nothinbutdotnetstore.specs
         public abstract class concern : Observes<RequestCommand,
                                             DefaultRequestCommand>
         {
-        
         }
 
         [Subject(typeof(DefaultRequestCommand))]
@@ -18,8 +18,8 @@ namespace nothinbutdotnetstore.specs
 
             Establish c = () =>
             {
-                request = an<Request>();
                 provide_a_basic_sut_constructor_argument<RequestMatch>(x => true);
+                request = an<Request>();
             };
 
             Because b = () =>
@@ -30,6 +30,26 @@ namespace nothinbutdotnetstore.specs
 
 
             static bool result;
+            static Request request;
+        }
+
+        [Subject(typeof(DefaultRequestCommand))]
+        public class when_processing_a_request : concern
+        {
+            Establish c = () =>
+            {
+                application_behaviour = the_dependency<ApplicationBehaviour>();
+                provide_a_basic_sut_constructor_argument<RequestMatch>(x => true);
+            };
+
+            Because b = () =>
+                sut.run(request);
+
+
+            It should_trigger_the_application_specific_behaviour_to_do_the_work = () =>
+                application_behaviour.received(x => x.run(request));
+
+            static ApplicationBehaviour application_behaviour;
             static Request request;
         }
     }

@@ -4,6 +4,7 @@
  using nothinbutdotnetstore.specs.utility;
  using nothinbutdotnetstore.web;
  using System.Linq;
+ using nothinbutdotnetstore.web.core;
  using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs

@@ -2,8 +2,8 @@ using System.Web;
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
 using nothinbutdotnetstore.specs.utility;
-using nothinbutdotnetstore.web;
-using nothinbutdotnetstore.web.aspnet;
+using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.core.aspnet;
 using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs
@@ -25,10 +25,8 @@ namespace nothinbutdotnetstore.specs
                 front_controller = the_dependency<FrontController>();
                 request = an<Request>();
 
-
                 request_factory.Stub(x => x.create_request_from(the_current_context))
                     .Return(request);
-
             };
 
             Because b = () =>
