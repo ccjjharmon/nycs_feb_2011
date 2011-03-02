@@ -14,7 +14,7 @@ namespace nothinbutdotnetstore.tasks.stubs
 
         public IEnumerable<Department> get_sub_departments_for(Department department)
         {
-            throw new NotImplementedException();
+            return Enumerable.Range(1, 100).Select(x => new Department{name = x.ToString("Sub Department 0")});
         }
     }
 }

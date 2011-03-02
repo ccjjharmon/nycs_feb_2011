@@ -12,46 +12,40 @@ namespace nothinbutdotnetstore.specs
 {
     public class ViewTheDepartmentsInADepartmentSpecs
     {
-        #region Nested type: concern
-
         public abstract class concern : Observes<ApplicationBehaviour,
                                             ViewTheDepartmentsInADepartment>
         {
         }
 
-        #endregion
-
-        #region Nested type: when_run
-
-        [Subject(typeof (ViewTheDepartmentsInADepartment))]
+        [Subject(typeof(ViewTheDepartmentsInADepartment))]
         public class when_run : concern
         {
-            private static Request request;
-            private static ResponseEngine response_engine;
-            private static Department department;
-            private static StoreCatalog store_catalog;
-            private static IEnumerable<Department> sub_departments;
+            static Request request;
+            static ResponseEngine response_engine;
+            static Department parent_department;
+            static StoreCatalog store_catalog;
+            static IEnumerable<Department> sub_departments;
 
-            private Because b = () =>
-                                sut.run(request);
+            Because b = () =>
+                sut.run(request);
 
-            private Establish c = () =>
-                                      {
-                                          sub_departments = ObjectFactory.create_a_set_of(100, () => new Department());
-                                          request = an<Request>();
-                                          response_engine = the_dependency<ResponseEngine>();
-                                          department = an<Department>();
+            Establish c = () =>
+            {
+                response_engine = the_dependency<ResponseEngine>();
+                store_catalog = the_dependency<StoreCatalog>();
+                parent_department = an<Department>();
 
-                                          store_catalog = the_dependency<StoreCatalog>();
+                sub_departments = ObjectFactory.create_a_set_of(100, () => new Department());
+                request = an<Request>();
 
-                                          store_catalog.Stub(x => x.get_sub_departments_for(department))
-                                              .Return(sub_departments);
-                                      };
+                request.Stub(x => x.get_a<Department>()).Return(parent_department);
 
-            private It should_display_the_sub_departments =
-                () => response_engine.received(x => x.display(sub_departments));
+                store_catalog.Stub(x => x.get_sub_departments_for(parent_department))
+                    .Return(sub_departments);
+            };
+
+            It should_display_the_sub_departments = () => 
+                response_engine.received(x => x.display(sub_departments));
         }
-
-        #endregion
     }
 }
