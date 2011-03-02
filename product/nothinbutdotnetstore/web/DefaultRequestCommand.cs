@@ -4,6 +4,13 @@ namespace nothinbutdotnetstore.web
 {
     public class DefaultRequestCommand : RequestCommand
     {
+        private RequestMatch match;
+
+        public DefaultRequestCommand(RequestMatch match)
+        {
+            this.match = match;
+        }
+
         public void run(Request request)
         {
             throw new NotImplementedException();
@@ -11,7 +18,7 @@ namespace nothinbutdotnetstore.web
 
         public bool can_handle(Request request)
         {
-            throw new NotImplementedException();
+            return this.match(request);
         }
     }
 }
