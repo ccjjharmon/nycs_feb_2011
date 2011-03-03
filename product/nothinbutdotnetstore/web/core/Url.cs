@@ -1,5 +1,7 @@
 ﻿namespace nothinbutdotnetstore.web.core
 {
+    public delegate bool Command();
+
     public static class Url
     {
         public static string to_run<BehaviourToRun>()
@@ -7,6 +9,20 @@
         {
             return get_url_name<BehaviourToRun>();
         }
+
+        public static string to_run_iif<BehaviourToRunIfTrue, BehaviourToRunIfFalse>(Command command)
+            where BehaviourToRunIfTrue : ApplicationBehaviour
+            where BehaviourToRunIfFalse : ApplicationBehaviour
+        {
+            if(command())
+            {
+                return to_run<BehaviourToRunIfTrue>();
+            }else
+            {
+             return to_run<BehaviourToRunIfFalse>();   
+            }
+        }
+
 
         static string get_url_name<BehaviourToRun>()
         {

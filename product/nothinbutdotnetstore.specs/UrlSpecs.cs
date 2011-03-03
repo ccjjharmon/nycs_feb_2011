@@ -11,6 +11,30 @@ namespace nothinbutdotnetstore.specs
         {
         }
 
+        [Subject(typeof (Url))]
+        public class when_given_two_behaviours_and_building_a_url : concern
+        {
+            private Because b = () =>
+                Url.to_run_iif<OurBehaviour, OurBehaviour>(command);
+
+
+            private Establish c = () =>
+                                      {
+                                          Command command = an<Command>();
+
+                                      };
+
+            private It should_test_the_delegate_parameter = () =>
+                                                                {
+                                                                    command.received(x => x.Invoke());
+
+
+                                                                } ;
+            
+
+            private static Command command;
+
+        }
         [Subject(typeof(Url))]
         public class when_building_a_url_to_target_a_behaviour : concern
         {
