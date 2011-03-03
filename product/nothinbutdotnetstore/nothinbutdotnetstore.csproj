@@ -87,8 +87,8 @@
     <Compile Include="tasks\StoreCatalog.cs" />
     <Compile Include="tasks\stubs\StubStoreCatalog.cs" />
     <Compile Include="utility\Stub .cs" />
-    <Compile Include="web\application\catalogbrowsing\DefaultApplicationBehavior.cs" />
-    <Compile Include="web\application\catalogbrowsing\StoreCatalogQuery.cs" />
+    <Compile Include="web\application\catalogbrowsing\Query.cs" />
+    <Compile Include="web\application\catalogbrowsing\ViewResultFor.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheDepartmentsInADepartment.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheProductsIntheDepartment.cs" />
@@ -107,6 +107,7 @@
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestMatch.cs" />
     <Compile Include="web\core\ResponseEngine.cs" />
+    <Compile Include="web\core\stubs\GetTheProducts.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />

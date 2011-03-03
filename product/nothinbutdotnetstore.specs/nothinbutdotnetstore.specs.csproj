@@ -110,7 +110,7 @@
     <Compile Include="BasicHandlerSpecs.cs" />
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
-    <Compile Include="DefaultApplicationBehaviourSpecs.cs" />
+    <Compile Include="ViewResultsForSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="RequestCommandSpecs.cs" />
