@@ -1,27 +1,33 @@
-﻿namespace nothinbutdotnetstore.web.core
+﻿using System.Collections.Generic;
+using Machine.Specifications;
+using Machine.Specifications.DevelopWithPassion.Extensions;
+using System.Linq;
+
+namespace nothinbutdotnetstore.web.core
 {
-    public static class Url
+    public class Url
     {
-        public static string to_run<BehaviourToRun>()
+        public UrlBuilder<object> to_run<BehaviourToRun>()
             where BehaviourToRun : ApplicationBehaviour
         {
             return get_url_name<BehaviourToRun>();
         }
 
-        static string get_url_name<BehaviourToRun>()
+        UrlBuilder<object> get_url_name<BehaviourToRun>()
         {
-            return string.Format("{0}.nyc", typeof(BehaviourToRun).Name);
+            return new UrlBuilder<BehaviourToRun>(string.Format("{0}.nyc", typeof(BehaviourToRun).Name));
         }
 
-        public static RequestMatch to_match_request_for<BehaviourToMatch>() where BehaviourToMatch
+        public RequestMatch to_match_request_for<BehaviourToMatch>() where BehaviourToMatch
                                                                                 : ApplicationBehaviour
         {
             return new RequestContainsCommand<BehaviourToMatch>().matches;
         }
 
-        public static string to_run_iif<Left, Right>(bool condition)
+        public UrlBuilder<object> to_run_iif<Left, Right>(bool condition)
         {
             return (condition ? get_url_name<Left>() : get_url_name<Right>());
         }
+
     }
 }

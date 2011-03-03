@@ -113,6 +113,7 @@
     <Compile Include="HandlerViewFactorySpecs.cs" />
     <Compile Include="RequestContainsCommandSpecs.cs" />
     <Compile Include="spikes\ExpressionTreeSpecs.cs" />
+    <Compile Include="UrlBuilderSpecs.cs" />
     <Compile Include="UrlSpecs.cs" />
     <Compile Include="utility\ExpressionUtility.cs" />
     <Compile Include="ViewResultsForSpecs.cs" />
