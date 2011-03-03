@@ -88,6 +88,7 @@
     <Compile Include="tasks\stubs\StubStoreCatalog.cs" />
     <Compile Include="utility\Stub .cs" />
     <Compile Include="web\application\catalogbrowsing\Query.cs" />
+    <Compile Include="web\application\catalogbrowsing\StoreCatalogController.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewResultFor.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheDepartmentsInADepartment.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheMainDepartmentsInTheStore.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="web\core\stubs\StubSpecialCaseFactory.cs" />
     <Compile Include="web\core\aspnet\WebFormResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubViewPathRegistry.cs" />
+    <Compile Include="web\core\Url.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

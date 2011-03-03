@@ -12,5 +12,11 @@
         {
             return string.Format("{0}.nyc", typeof(BehaviourToRun).Name);
         }
+
+        public static RequestMatch to_match_request_for<BehaviourToMatch>() where BehaviourToMatch
+            : ApplicationBehaviour
+        {
+            return new RequestContainsCommand<BehaviourToMatch>().matches;
+        }
     }
 }

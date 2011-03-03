@@ -1,42 +1,57 @@
- using System;
- using Machine.Specifications;
- using Machine.Specifications.DevelopWithPassion.Rhino;
- using nothinbutdotnetstore.web.core;
+using System;
+using Machine.Specifications;
+using Machine.Specifications.DevelopWithPassion.Rhino;
+using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.specs
-{   
+{
     public class UrlSpecs
     {
         public abstract class concern : Observes
         {
-        
         }
 
         [Subject(typeof(Url))]
-        public class when_observation_name : concern
+        public class when_building_a_url_to_target_a_behaviour : concern
         {
-            private Establish c = () =>
-                                      {
-                                          
-                                          application_behavior = an<ApplicationBehaviour>();                                          
-                                      };
 
-            private Because b = () => result =Url.to_run<ApplicationBehaviour>();
+            Because b = () =>
+                result = Url.to_run<OurBehaviour>();
 
-            It should_return_a_string = () => { };
+            It should_return_a_string_containing_the_name_of_the_behaviour = () =>
+                result.ShouldContain(typeof(OurBehaviour).Name);
 
+            It should_end_with_the_handler_suffix = () =>
+                result.ShouldEndWith(".nyc");
 
-            private static ApplicationBehaviour application_behavior;
-            private static string result;
+  
+                
+
+            static string result;
         }
-    }
+        public class when_creating_a_request_match_for_a_behaviour : concern
+        {
 
-    
-    public static class Url
+            Because b = () =>
+                result = Url.to_match_request_for<OurBehaviour>();
+
+
+            It should_return_a_delegate_that_matches_the_expected_command = () =>
+                result.Method.DeclaringType.ShouldEqual(typeof(RequestContainsCommand<OurBehaviour>));
+
+
+  
+                
+
+            static RequestMatch result;
+        }
+    class OurBehaviour : ApplicationBehaviour
     {
-        public static string to_run<T>()
+        public void run(Request request)
         {
-            throw new Exception();
+            throw new NotImplementedException();
         }
     }
+    }
+
 }
