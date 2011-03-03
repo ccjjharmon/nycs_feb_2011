@@ -19,6 +19,11 @@ namespace nothinbutdotnetstore.web.core.stubs
                 return (InputModel) item;
 
             }
+
+            public string raw_command
+            {
+                get { throw new NotImplementedException(); }
+            }
         }
     }
 }

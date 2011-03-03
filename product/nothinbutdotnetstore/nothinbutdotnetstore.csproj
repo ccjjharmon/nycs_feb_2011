@@ -106,7 +106,7 @@
     <Compile Include="web\core\aspnet\ViewFor.cs" />
     <Compile Include="web\core\aspnet\ViewPathRegistry.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
-    <Compile Include="web\core\DefaultRouter.cs" />
+    <Compile Include="web\core\RequestContainsCommand.cs" />
     <Compile Include="web\core\MissingRequestCommandFactory.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
