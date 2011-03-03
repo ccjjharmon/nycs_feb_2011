@@ -1,4 +1,6 @@
-﻿namespace nothinbutdotnetstore.web.core
+﻿using System;
+
+namespace nothinbutdotnetstore.web.core
 {
     public delegate bool Command();
 
@@ -14,6 +16,7 @@
             where BehaviourToRunIfTrue : ApplicationBehaviour
             where BehaviourToRunIfFalse : ApplicationBehaviour
         {
+            if(typeof(BehaviourToRunIfTrue).Name.Equals(typeof(BehaviourToRunIfFalse).name)) throw new Exception("types the same");
             if(command())
             {
                 return to_run<BehaviourToRunIfTrue>();
