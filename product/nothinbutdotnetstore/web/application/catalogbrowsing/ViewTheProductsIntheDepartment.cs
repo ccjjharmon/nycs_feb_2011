@@ -3,7 +3,7 @@ using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.utility;
 using nothinbutdotnetstore.web.application.model;
 using nothinbutdotnetstore.web.core;
-using nothinbutdotnetstore.web.core.stubs;
+using nothinbutdotnetstore.web.core.aspnet;
 
 namespace nothinbutdotnetstore.web.application.catalogbrowsing
 {
@@ -12,7 +12,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
         ResponseEngine response_engine;
         StoreCatalog store_catalog;
 
-        public ViewTheProductsIntheDepartment():this(Stub.with<StubResponseEngine>(),
+        public ViewTheProductsIntheDepartment():this(new WebFormResponseEngine(),
             Stub.with<StubStoreCatalog>())
         {
         }

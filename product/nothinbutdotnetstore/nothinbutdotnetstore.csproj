@@ -96,6 +96,15 @@
     <Compile Include="web\application\model\Product.cs" />
     <Compile Include="web\core\ApplicationBehaviour .cs" />
     <Compile Include="web\core\aspnet\BasicHandler.cs" />
+    <Compile Include="web\core\aspnet\BasicViewFor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\core\aspnet\PageFactory.cs" />
+    <Compile Include="web\core\aspnet\GetTheCurrentContext.cs" />
+    <Compile Include="web\core\aspnet\HandlerViewFactory.cs" />
+    <Compile Include="web\core\aspnet\ViewFactory.cs" />
+    <Compile Include="web\core\aspnet\ViewFor.cs" />
+    <Compile Include="web\core\aspnet\ViewPathRegistry.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
     <Compile Include="web\core\MissingRequestCommandFactory.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
@@ -109,10 +118,11 @@
     <Compile Include="web\core\ResponseEngine.cs" />
     <Compile Include="web\core\stubs\GetTheProducts.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
-    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\core\stubs\StubSpecialCaseFactory.cs" />
-    <Compile Include="web\core\WebFormResponseEngine.cs" />
+    <Compile Include="web\core\aspnet\WebFormResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubViewPathRegistry.cs" />
+    <Compile Include="web\core\Url.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

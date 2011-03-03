@@ -1,49 +1,45 @@
- using System;
- using Machine.Specifications;
- using Machine.Specifications.DevelopWithPassion.Rhino;
- using nothinbutdotnetstore.web.application.catalogbrowsing;
- using nothinbutdotnetstore.web.core;
+using System;
+using Machine.Specifications;
+using Machine.Specifications.DevelopWithPassion.Rhino;
+using nothinbutdotnetstore.web.application.catalogbrowsing;
+using nothinbutdotnetstore.web.core;
+using Machine.Specifications.DevelopWithPassion.Extensions;
 
 namespace nothinbutdotnetstore.specs
-{   
+{
     public class UrlSpecs
     {
         public abstract class concern : Observes
         {
-        
         }
 
         [Subject(typeof(Url))]
-        public class when_observation_name : concern
+        public class when_building_a_url_to_target_a_behaviour : concern
         {
-            private Establish c = () =>
-                                      {
-                                          application_behavior = new ViewTheDepartmentsInADepartment();
-                                          
-                                      };
 
-            private Because b = () => result =Url.to_run<ApplicationBehaviour>();
-                               
+            Because b = () => 
+                result = Url.to_run<MyBehaviourItem>();
 
-            private It should_return_a_string = () =>  result.Equals("ViewTheDepartmentsInADepartment"); 
+            It should_return_a_string_containing_the_name_of_the_behaviour = () => 
+                result.ShouldStartWith(typeof(MyBehaviourItem).Name);
 
+            It should_add_the_handler_suffix_to_the_url = () =>
+            {
+                result.ShouldEndWith(".nyc");
+            };
+  
 
-            private static ApplicationBehaviour application_behavior;
-            private static string result;
-        }
-    }
-
-    
-    public static class Url<T>
-    {
-        public static string to_run<T>()
-        {
-            return get_url_name(Typeof(T));
+            static ApplicationBehaviour application_behavior;
+            static string result;
         }
 
-        private static string get_url_name(Type type)
+        private class MyBehaviourItem : ApplicationBehaviour
         {
-            throw new NotImplementedException();
+            public void run(Request request)
+            {
+                throw new NotImplementedException();
+            }
         }
+
     }
 }
