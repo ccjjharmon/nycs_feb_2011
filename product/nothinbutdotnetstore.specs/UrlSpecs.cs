@@ -1,6 +1,7 @@
  using System;
  using Machine.Specifications;
  using Machine.Specifications.DevelopWithPassion.Rhino;
+ using nothinbutdotnetstore.web.application.catalogbrowsing;
  using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.specs
@@ -17,14 +18,14 @@ namespace nothinbutdotnetstore.specs
         {
             private Establish c = () =>
                                       {
+                                          application_behavior = new ViewTheDepartmentsInADepartment();
                                           
-                                          application_behavior = an<ApplicationBehaviour>();                                          
                                       };
 
             private Because b = () => result =Url.to_run<ApplicationBehaviour>();
                                
 
-            private It should_return_a_string = () =>  { }
+            private It should_return_a_string = () =>  result.Equals("ViewTheDepartmentsInADepartment"); 
 
 
             private static ApplicationBehaviour application_behavior;
@@ -33,11 +34,16 @@ namespace nothinbutdotnetstore.specs
     }
 
     
-    public static class Url
+    public static class Url<T>
     {
         public static string to_run<T>()
         {
-            throw new Exception();
+            return get_url_name(Typeof(T));
+        }
+
+        private static string get_url_name(Type type)
+        {
+            throw new NotImplementedException();
         }
     }
 }
