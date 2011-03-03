@@ -11,6 +11,46 @@ namespace nothinbutdotnetstore.specs
         {
         }
 
+        [Subject(typeof (Url))]
+        public class when_to_run_iif_is_called : concern
+        {
+            private Establish c = () =>
+                                      {
+                                          has_products = true;
+                                          left = new LeftBehavior();
+                                          right = new RightBehavior();
+
+                                      };
+
+            private It should_evaluate = () => result.ShouldEqual(string.Format("{0}.nyc", typeof(LeftBehavior).Name));
+            private static string path;
+            private static string result;
+
+
+            private Because b = () =>
+                               result = Url.to_run_iif<LeftBehavior, RightBehavior>(has_products);
+
+            class RightBehavior:ApplicationBehaviour
+            {
+                public void run(Request request)
+                {
+                    throw new NotImplementedException();
+                }
+            }
+
+            class LeftBehavior:ApplicationBehaviour
+            {
+                public void run(Request request)
+                {
+                    throw new NotImplementedException();
+                }
+            }
+
+            private static bool has_products;
+            private static LeftBehavior left;
+            private static RightBehavior right;
+        }
+
         [Subject(typeof(Url))]
         public class when_building_a_url_to_target_a_behaviour : concern
         {

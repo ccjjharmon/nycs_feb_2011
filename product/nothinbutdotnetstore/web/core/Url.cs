@@ -1,4 +1,6 @@
-﻿namespace nothinbutdotnetstore.web.core
+﻿using System;
+
+namespace nothinbutdotnetstore.web.core
 {
     public static class Url
     {
@@ -17,6 +19,14 @@
             : ApplicationBehaviour
         {
             return new RequestContainsCommand<BehaviourToMatch>().matches;
+        }
+
+        public static string to_run_iif<Left, Right>(bool has_products)
+        {
+            if (has_products)
+                return get_url_name<Left>();
+
+            return get_url_name<Right>();
         }
     }
 }
