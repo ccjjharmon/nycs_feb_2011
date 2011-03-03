@@ -20,7 +20,7 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         RequestCommand create_command<Behaviour>() where Behaviour : ApplicationBehaviour, new()
         {
-            return new DefaultRequestCommand(x => true,
+            return new DefaultRequestCommand(Url.to_match_request_for<Behaviour>(),
                                                    new Behaviour());
         }
     }

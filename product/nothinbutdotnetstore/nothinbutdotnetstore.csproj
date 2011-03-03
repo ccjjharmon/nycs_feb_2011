@@ -88,6 +88,7 @@
     <Compile Include="tasks\stubs\StubStoreCatalog.cs" />
     <Compile Include="utility\Stub .cs" />
     <Compile Include="web\application\catalogbrowsing\Query.cs" />
+    <Compile Include="web\application\catalogbrowsing\StoreCatalogController.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewResultFor.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheDepartmentsInADepartment.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewTheMainDepartmentsInTheStore.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="web\core\aspnet\ViewFor.cs" />
     <Compile Include="web\core\aspnet\ViewPathRegistry.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
+    <Compile Include="web\core\RequestContainsCommand.cs" />
     <Compile Include="web\core\MissingRequestCommandFactory.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
@@ -116,14 +118,18 @@
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestMatch.cs" />
     <Compile Include="web\core\ResponseEngine.cs" />
+    <Compile Include="web\core\Router.cs" />
     <Compile Include="web\core\stubs\GetTheProducts.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\core\stubs\StubSpecialCaseFactory.cs" />
     <Compile Include="web\core\aspnet\WebFormResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubViewPathRegistry.cs" />
+    <Compile Include="web\core\Url.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

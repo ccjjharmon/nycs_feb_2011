@@ -111,6 +111,8 @@
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="HandlerViewFactorySpecs.cs" />
+    <Compile Include="RequestContainsCommandSpecs.cs" />
+    <Compile Include="UrlSpecs.cs" />
     <Compile Include="ViewResultsForSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
