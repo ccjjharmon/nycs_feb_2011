@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="nothinbutdotnetstore.tasks.stubs.StubStoreCatalog" Collapsed="true">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tasks\stubs\StubStoreCatalog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="nothinbutdotnetstore.utility.Stub" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>utility\Stub .cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="nothinbutdotnetstore.web.core.DefaultCommandRegistry" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAEAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\DefaultCommandRegistry.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="nothinbutdotnetstore.web.core.DefaultFrontController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>web\core\DefaultFrontController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="nothinbutdotnetstore.web.core.DefaultRequestCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAI=</HashCode>
+      <FileName>web\core\DefaultRequestCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="nothinbutdotnetstore.tasks.StoreCatalog" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tasks\StoreCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nothinbutdotnetstore.web.core.ApplicationBehaviour" Collapsed="true">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\ApplicationBehaviour .cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nothinbutdotnetstore.web.core.ResponseEngine" Collapsed="true">
+    <Position X="14.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\ResponseEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nothinbutdotnetstore.web.core.CommandRegistry" Collapsed="true">
+    <Position X="12.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\CommandRegistry.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nothinbutdotnetstore.web.core.FrontController" Collapsed="true">
+    <Position X="14.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>web\core\FrontController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nothinbutdotnetstore.web.core.Request" Collapsed="true">
+    <Position X="16.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\Request.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nothinbutdotnetstore.web.core.RequestCommand" Collapsed="true">
+    <Position X="10.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\RequestCommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nothinbutdotnetstore.web.core.RequestFactory" Collapsed="true">
+    <Position X="12.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\RequestFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="nothinbutdotnetstore.web.core.MissingRequestCommandFactory" Collapsed="true">
+    <Position X="12.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>web\core\MissingRequestCommandFactory.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="nothinbutdotnetstore.web.core.RequestMatch" Collapsed="true">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>web\core\RequestMatch.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
