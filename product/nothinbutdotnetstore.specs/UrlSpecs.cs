@@ -19,17 +19,12 @@ namespace nothinbutdotnetstore.specs
 
 
             private Establish c = () =>
-                                      {
-                                          Command command = an<Command>();
-
-                                      };
+                {
+                    Command command = an<Command>();
+                };
 
             private It should_test_the_delegate_parameter = () =>
-                                                                {
-                                                                    command.received(x => x.Invoke());
-
-
-                                                                } ;
+                command.received(x => x.Invoke());
             
 
             private static Command command;
