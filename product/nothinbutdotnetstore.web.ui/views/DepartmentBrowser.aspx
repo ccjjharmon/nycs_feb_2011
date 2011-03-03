@@ -11,9 +11,10 @@ CodeFile="DepartmentBrowser.aspx.cs"
             <% foreach (var department in this.report_model)
                {%>
               <tr class="ListItem">
-                 <td><a href="<%= Url.to_run_iif<ViewTheProductsIntheDepartment,
-                 ViewTheDepartmentsInADepartment>(department.has_products)
-                 
+                 <td><a href="<%= Url.to_run<ViewTheDepartmentsInADepartment>()
+                 .include_in_payload(department)
+                 .the_detail(x => x.has_products)
+                 .the_detail(x => x.name)
                  %>"><%= department.name %></a></td>
            	  </tr>        
               <%

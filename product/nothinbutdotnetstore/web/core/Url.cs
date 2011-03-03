@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace nothinbutdotnetstore.web.core
+﻿namespace nothinbutdotnetstore.web.core
 {
     public static class Url
     {
@@ -16,17 +14,14 @@ namespace nothinbutdotnetstore.web.core
         }
 
         public static RequestMatch to_match_request_for<BehaviourToMatch>() where BehaviourToMatch
-            : ApplicationBehaviour
+                                                                                : ApplicationBehaviour
         {
             return new RequestContainsCommand<BehaviourToMatch>().matches;
         }
 
-        public static string to_run_iif<Left, Right>(bool has_products)
+        public static string to_run_iif<Left, Right>(bool condition)
         {
-            if (has_products)
-                return get_url_name<Left>();
-
-            return get_url_name<Right>();
+            return (condition ? get_url_name<Left>() : get_url_name<Right>());
         }
     }
 }
