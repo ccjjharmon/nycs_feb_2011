@@ -1,9 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using nothinbutdotnetstore.tasks.stubs;
-using nothinbutdotnetstore.utility;
 using nothinbutdotnetstore.web.application.catalogbrowsing;
-using nothinbutdotnetstore.web.application.model;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
@@ -16,9 +13,15 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         public IEnumerator<RequestCommand> GetEnumerator()
         {
-            yield return new DefaultRequestCommand(x => true,new ViewResultFor<IEnumerable<Product>>(
-                x => Stub.with<StubStoreCatalog>().get_products_for(x.map<Department>())));
+            yield return create_command<ViewTheDepartmentsInADepartment>();
+            yield return create_command<ViewTheMainDepartmentsInTheStore>();
+            yield return create_command<ViewTheProductsIntheDepartment>();
+        }
 
+        RequestCommand create_command<Behaviour>() where Behaviour : ApplicationBehaviour, new()
+        {
+            return new DefaultRequestCommand(x => true,
+                                                   new Behaviour());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using nothinbutdotnetstore.utility;
 using nothinbutdotnetstore.web.core;
-using nothinbutdotnetstore.web.core.stubs;
+using nothinbutdotnetstore.web.core.aspnet;
 
 namespace nothinbutdotnetstore.web.application.catalogbrowsing
 {
@@ -10,7 +10,7 @@ namespace nothinbutdotnetstore.web.application.catalogbrowsing
         Query<ReportModel> query;
 
         public ViewResultFor(Query<ReportModel> query) : this(
-            Stub.with<StubResponseEngine>(), query
+            new WebFormResponseEngine(), query
             )
         {
         }
