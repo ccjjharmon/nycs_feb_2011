@@ -111,6 +111,7 @@
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="HandlerViewFactorySpecs.cs" />
+    <Compile Include="PropertyNameExpressionMapperSpecs.cs" />
     <Compile Include="RequestContainsCommandSpecs.cs" />
     <Compile Include="spikes\ExpressionTreeSpecs.cs" />
     <Compile Include="TokenStoreSpecs.cs" />

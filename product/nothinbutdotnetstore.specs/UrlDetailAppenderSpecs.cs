@@ -38,11 +38,11 @@ namespace nothinbutdotnetstore.specs
 
             It should_store_the_property_name_and_value_correctly = () =>
             {
-                tokens.received(x => x.register_token_pair(property_name, the_item.name));
+                //tokens.received(x => x.register_token_pair(property_name, the_item.name));
             };
 
-            It should_return_a_detail_appender_that_can_continue_the_detail_building = () =>
-                result.ShouldBeAn<UrlDetailAppender<TheItemWithDetails>>().ShouldNotEqual(sut);
+            private It should_return_a_detail_appender_that_can_continue_the_detail_building = () =>
+                                                                                               result.ShouldBeAn<UrlDetailAppender<TheItemWithDetails>>().ShouldNotEqual(sut);
 
             static TokenStore tokens;
             static string property_name;

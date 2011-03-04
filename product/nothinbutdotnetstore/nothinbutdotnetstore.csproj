@@ -51,6 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Machine.Specifications.DevelopWithPassion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\thirdparty\machine.specifications\Rhino.Mocks.dll</HintPath>
@@ -104,6 +105,7 @@
     <Compile Include="web\core\aspnet\BasicViewFor.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="utility\DefaultPropertyNameExpressionMapper.cs" />
     <Compile Include="web\core\aspnet\PageFactory.cs" />
     <Compile Include="web\core\aspnet\GetTheCurrentContext.cs" />
     <Compile Include="web\core\aspnet\HandlerViewFactory.cs" />
