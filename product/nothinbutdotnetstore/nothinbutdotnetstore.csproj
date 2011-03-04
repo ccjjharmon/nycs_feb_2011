@@ -86,9 +86,11 @@
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="tasks\StoreCatalog.cs" />
     <Compile Include="tasks\stubs\StubStoreCatalog.cs" />
+    <Compile Include="utility\DefaultTokenStore.cs" />
     <Compile Include="utility\PropertyAccessor.cs" />
     <Compile Include="utility\PropertyNameExpressionMapper.cs" />
     <Compile Include="utility\Stub .cs" />
+    <Compile Include="utility\TokenStore.cs" />
     <Compile Include="web\application\catalogbrowsing\Query.cs" />
     <Compile Include="web\application\catalogbrowsing\StoreCatalogController.cs" />
     <Compile Include="web\application\catalogbrowsing\ViewResultFor.cs" />
