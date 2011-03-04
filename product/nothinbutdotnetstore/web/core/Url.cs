@@ -1,17 +1,15 @@
-﻿namespace nothinbutdotnetstore.web.core
+﻿using System;
+
+namespace nothinbutdotnetstore.web.core
 {
     public static class Url
     {
-        public static string to_run<BehaviourToRun>()
+        public static UrlDecorator to_run<BehaviourToRun>()
             where BehaviourToRun : ApplicationBehaviour
         {
-            return get_url_name<BehaviourToRun>();
+            throw new NotImplementedException();
         }
 
-        static string get_url_name<BehaviourToRun>()
-        {
-            return string.Format("{0}.nyc", typeof(BehaviourToRun).Name);
-        }
 
         public static RequestMatch to_match_request_for<BehaviourToMatch>() where BehaviourToMatch
                                                                                 : ApplicationBehaviour
@@ -21,7 +19,7 @@
 
         public static string to_run_iif<Left, Right>(bool condition)
         {
-            return (condition ? get_url_name<Left>() : get_url_name<Right>());
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,7 +12,7 @@ CodeFile="DepartmentBrowser.aspx.cs"
                {%>
               <tr class="ListItem">
                  <td><a href="<%= Url.to_run<ViewTheDepartmentsInADepartment>()
-                 .include_in_payload(department)
+                 .include_payload(department)
                  .the_detail(x => x.has_products)
                  .the_detail(x => x.name)
                  %>"><%= department.name %></a></td>

@@ -86,6 +86,8 @@
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="tasks\StoreCatalog.cs" />
     <Compile Include="tasks\stubs\StubStoreCatalog.cs" />
+    <Compile Include="utility\PropertyAccessor.cs" />
+    <Compile Include="utility\PropertyNameExpressionMapper.cs" />
     <Compile Include="utility\Stub .cs" />
     <Compile Include="web\application\catalogbrowsing\Query.cs" />
     <Compile Include="web\application\catalogbrowsing\StoreCatalogController.cs" />
@@ -107,6 +109,8 @@
     <Compile Include="web\core\aspnet\ViewFor.cs" />
     <Compile Include="web\core\aspnet\ViewPathRegistry.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
+    <Compile Include="web\core\DefaultUrlBuilder.cs" />
+    <Compile Include="web\core\DefaultUrlDetailAppender.cs" />
     <Compile Include="web\core\RequestContainsCommand.cs" />
     <Compile Include="web\core\MissingRequestCommandFactory.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
@@ -126,6 +130,11 @@
     <Compile Include="web\core\aspnet\WebFormResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubViewPathRegistry.cs" />
     <Compile Include="web\core\Url.cs" />
+    <Compile Include="web\core\UrlBuilder.cs" />
+    <Compile Include="web\core\UrlDecorator.cs" />
+    <Compile Include="web\core\UrlDetailAppender.cs" />
+    <Compile Include="web\core\UrlDetailAppenderFactory.cs" />
+    <Compile Include="web\core\UrlToken.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
